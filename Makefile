@@ -1,5 +1,3 @@
-# Minimal Makefile for the Baking Pi lessons
-
 CROSS_COMPILER = arm-none-eabi
 CC = $(CROSS_COMPILER)-gcc
 LD = $(CROSS_COMPILER)-ld
@@ -14,8 +12,8 @@ kernel.img: main.o
 	$(LD) $(LDFLAGS) main.o -o kernel.elf
 	$(OBJCOPY) kernel.elf -O binary kernel.img
 
-main.o: source/main.s
-	$(CC) $(CFLAGS) -c source/main.s -o main.o
+main.o: main.s
+	$(CC) $(CFLAGS) -c main.s -o main.o
 
 clean:
 	rm -f *.o *.elf *.img
