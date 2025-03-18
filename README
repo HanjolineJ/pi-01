@@ -1,0 +1,13 @@
+Raspberry Pi Assembly LED Control
+
+This project assembly on Pi 1 to control the ACT LED via GPIO16.
+-  GPIO16 as output
+- ACT LED triggered by clearing GPIO16.
+- An infinite loop is added to prevent the CPU from executing anthing else
+
+Build Instructions:
+ Run `make` to assemble and link the code, generating `kernel.img`.
+Copy `kernel.img` to your Raspberry Pi's SD card to boot.
+Put SD in pi before plugging in power source
+
+Change Raspberry Pi’s GPIO registers in assembly to control the ACT LED, to understand operating systems hardware interactions for programming and debugging.
